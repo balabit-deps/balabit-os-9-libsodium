@@ -1,3 +1,13 @@
+libsodium (1.0.18-1ubuntu0.22.04.1) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: mishandled check in crypto_core_ed25519_is_valid_point
+    - debian/patches/CVE-2025-69277.patch: check Y==Z in addition to X==0
+      in src/libsodium/crypto_core/ed25519/ref10/ed25519_ref10.c,
+      test/default/core_ed25519.c.
+    - CVE-2025-69277
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 06 Jan 2026 11:09:10 -0500
+
 libsodium (1.0.18-1build2) jammy; urgency=high
 
   * No change rebuild for ppc64el baseline bump.
